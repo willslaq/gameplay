@@ -33,7 +33,7 @@ export function Home() {
         id: "1",
         name: "Lendários",
         icon: null,
-        owner: true,
+        owner: false,
       },
       category: "1",
       date: "22/06 às 20:40h",
