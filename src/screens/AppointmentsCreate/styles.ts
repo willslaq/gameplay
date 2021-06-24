@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
+    marginBottom: 12,
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
   },
@@ -32,9 +33,10 @@ export const styles = StyleSheet.create({
   image: {
     width: 64,
     height: 68,
-    backgroundColor: theme.colors.secondary50,
+    backgroundColor: theme.colors.secondary40,
     borderWidth: 1,
     borderRadius: 8,
+    borderColor: theme.colors.secondary50,
   },
   field: {
     width: "100%",
