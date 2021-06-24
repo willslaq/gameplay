@@ -4,7 +4,7 @@ Repositório dedicado ao código da trilha React Native do evento NextLevelWeek6
 
 ### Dicas:  
   
-  ######Diferença entre FlatList e ScrollView:
+  **Diferença entre FlatList e ScrollView:**  
   **Flatlist:** Não carrega todos em tela ao mesmo tempo, mais perfomance com muitos filhos.  
   **ScrollView** Para listas menores, pois carrega todos em tela.
   
