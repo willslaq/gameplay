@@ -38,6 +38,7 @@ type AuthContextData = {
   user: User;
   loading: boolean;
   signIn: () => Promise<void>;
+  signOut: () => Promise<void>;
 };
 
 type AuthProviderProps = {
@@ -49,6 +50,11 @@ export const AuthContext = createContext({} as AuthContextData);
 function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User>({} as User);
   const [loading, setLoading] = useState(false);
+
+  async function signOut() {
+    setUser({} as User);
+    await AsyncStorage.removeItem(COLLECTION_USERS);
+  }
 
   async function signIn() {
     try {
@@ -71,7 +77,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         const userInfo = await api.get("/users/@me");
 
         const firstName = userInfo.data.username.split("")[0];
-        userInfo.data.avatar = `${CDN_IMAGE}avatars/${userInfo.data.id}/${userInfo.data.avatar}.png`;
+        userInfo.data.avatar = `${CDN_IMAGE}/avatars/${userInfo.data.id}/${userInfo.data.avatar}.png`;
 
         const userData = {
           ...userInfo.data,
@@ -107,7 +113,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, signIn, loading }}>
+    <AuthContext.Provider value={{ user, signIn, loading, signOut }}>
       {children}
     </AuthContext.Provider>
   );

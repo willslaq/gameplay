@@ -3469,7 +3469,7 @@ expo-linear-gradient@~9.1.0:
   resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-9.1.0.tgz#7adfe8284268874134954b8249207938c455a5b3"
   integrity sha512-9W4TxaDrZUzmLzd18+Eo2Ef7ONnuLrHKX0PRyHEGY2/rJCtGiPJtJuR6AS5dkX7WB/Pxlx0zK/p/qDHHw09Uxg==
 
-expo-linking@~2.2.3:
+expo-linking@^2.2.3, expo-linking@~2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/expo-linking/-/expo-linking-2.2.3.tgz#925584a0ed7a617065fe92a39ba4509f70972664"
   integrity sha512-1NqL8sY4EzwRPVnBxbvNKBCfsG/tNZm72tVwzjoLxhO0XA6VTtZcb72Jaku4IlqEyH0lejxV2YAU0rbLv1pAVA==
@@ -5874,6 +5874,11 @@ react-native-svg@^12.1.1:
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
+
+react-native-uuid@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-uuid/-/react-native-uuid-2.0.1.tgz#ed4e2dfb1683eddb66967eb5dca140dfe1abddb9"
+  integrity sha512-cptnoIbL53GTCrWlb/+jrDC6tvb7ypIyzbXNJcpR3Vab0mkeaaVd5qnB3f0whXYzS+SMoSQLcUUB0gEWqkPC0g==
 
 react-native-web@~0.13.12:
   version "0.13.18"
